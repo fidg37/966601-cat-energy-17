@@ -1,0 +1,18 @@
+@import "mixins.scss";
+
+.main-header {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+  color: #111111;
+}
+
+.main-navigation__list {
+  @include ul-style-none();
+}
+
+.main-navigation__item {
+  a {
+    text-align: center;
+  }
+}
