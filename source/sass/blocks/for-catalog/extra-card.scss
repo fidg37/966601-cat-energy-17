@@ -1,0 +1,27 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.extra-card__title {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.extra-card__amount {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  color: #444444;
+}
+
+.extra-card__cost {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  color: #444444;
+}
+
+.extra-card__button {
+  font-size: 16px;
+  line-height: 1.25;
+}

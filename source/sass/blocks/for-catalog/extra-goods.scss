@@ -1,0 +1,11 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.extra-goods__title {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.extra-goods__list {
+  @include ul-style-none();
+}

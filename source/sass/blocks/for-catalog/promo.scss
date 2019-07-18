@@ -1,0 +1,18 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.promo {
+  width: 280px;
+  min-height: 289px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: $leaf;
+}
+
+.promo__text {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $white;
+}
