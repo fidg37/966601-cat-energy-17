@@ -1,10 +1,11 @@
+@import "mixins.scss";
 @import "variables.scss";
 
 .diets__text-area {
   width: 320px;
   min-height: 305px;
   color: $white;
-  background-image: url("../../../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: $leaf;
@@ -56,11 +57,11 @@
 .diets__icon--sitting-cat::before {
   width: 35px;
   height: 49px;
-  background-image: url("../../../img/icon-cat-slim.svg");
+  background-image: url("../img/icon-cat-slim.svg");
 }
 
 .diets__icon--walking-cat::before {
   width: 67px;
   height: 28px;
-  background-image: url("../../../img/icon-cat-pro.svg");
+  background-image: url("../img/icon-cat-pro.svg");
 }

@@ -1,4 +1,5 @@
 @import "mixins.scss";
+@import "variables.scss";
 
 .advantages__title {
   font-size: 36px;
@@ -32,23 +33,23 @@
 .advantages__icon--health::before {
   width: 26px;
   height: 29px;
-  background-image: url("../../../img/advantage-leaf@1x.png");
+  background-image: url("../img/advantage-leaf@1x.png");
 }
 
 .advantages__icon--powder::before {
   width: 29px;
   height: 31px;
-  background-image: url("../../../img/advantage-powder@1x.png");
+  background-image: url("../img/advantage-powder@1x.png");
 }
 
 .advantages__icon--saving::before {
   width: 23px;
   height: 30px;
-  background-image: url("../../../img/advantage-dining@1x.png");
+  background-image: url("../img/advantage-dining@1x.png");
 }
 
 .advantages__icon--time::before {
   width: 26px;
   height: 31px;
-  background-image: url("../../../img/advantage-clock@1x.png");
+  background-image: url("../img/advantage-clock@1x.png");
 }
