@@ -4,7 +4,6 @@
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
-  color: #111111;
 }
 
 .main-navigation__list {
@@ -13,6 +12,9 @@
 
 .main-navigation__item {
   a {
+    text-decoration: none;
+    text-transform: uppercase;
     text-align: center;
+    color: #111111;
   }
 }
