@@ -1,6 +1,9 @@
-@import "normalize.scss";
-@import "blocks/universal/header.scss";
-
 body {
   font-family: Oswald, Arial, sans-serif;
 }
+
+@import "normalize.scss";
+@import "blocks/universal/header.scss";
+@import "blocks/universal/text-area.scss";
+@import "blocks/universal/button.scss";
+@import "blocks/for-index/diets.scss";
