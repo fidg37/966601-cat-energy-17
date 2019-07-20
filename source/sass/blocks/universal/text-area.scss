@@ -1,0 +1,17 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.text-area {
+  text-align: center;
+}
+
+.text-area__title {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.text-area__description {
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+}

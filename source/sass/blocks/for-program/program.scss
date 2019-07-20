@@ -1,0 +1,45 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.program {
+  fieldset {
+    border: none;
+    font-size: 16px;
+    line-height: 1.13;
+    color: #222222;
+  }
+}
+
+.program__list {
+  @include ul-style-none();
+}
+
+.program__title {
+  font-size: 36px;
+  line-height: 1.67;
+}
+
+.program__text {
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.program__form-title {
+  font-size: 24px;
+  line-height: 1;
+  color: #111111;
+  font-weight: 400;
+}
+
+.program-button {
+  font-size: 16px;
+  line-height: 1.25;
+  border: none;
+}
+
+.program__notification {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #444444;
+}

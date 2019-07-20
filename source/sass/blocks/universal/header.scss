@@ -1,0 +1,21 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.main-header {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.main-navigation__list {
+  @include ul-style-none();
+}
+
+.main-navigation__item {
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111111;
+  }
+}

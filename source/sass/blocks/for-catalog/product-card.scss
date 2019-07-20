@@ -1,0 +1,20 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.product-card__title {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.product-card__list {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #444444;
+}
+
+.product-card__order-button {
+  font-size: 16px;
+  line-height: 1.25;
+}

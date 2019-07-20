@@ -1,0 +1,67 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.diets__text-area {
+  width: 320px;
+  min-height: 305px;
+  color: $white;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: $leaf;
+}
+
+.diets__button {
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.diets__item {
+  background-color: #f2f2f2;
+}
+
+.diets__title {
+  font-size: 24px;
+  line-height: 1.54;
+}
+
+.diets__description {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #444444;
+}
+
+.diets__link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.diets__icon {
+  width: 50px;
+  height: 51px;
+  background-color: $leaf;
+  border-radius: 50%;
+}
+
+.diets__icon::before {
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.diets__icon--sitting-cat::before {
+  width: 35px;
+  height: 49px;
+  background-image: url("../img/icon-cat-slim.svg");
+}
+
+.diets__icon--walking-cat::before {
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/icon-cat-pro.svg");
+}
