@@ -1,6 +1,3 @@
-@import "mixins.scss";
-@import "variables.scss";
-
 .program {
   fieldset {
     border: none;
@@ -38,7 +35,7 @@
 }
 
 .program__notification {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.14;
   color: #444444;

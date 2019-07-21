@@ -1,6 +1,3 @@
-@import "mixins.scss";
-@import "variables.scss";
-
 .advantages__title {
   font-size: 36px;
   line-height: 1.67;
@@ -11,45 +8,35 @@
 }
 
 .advantages__description {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.29;
   color: #444444;
 }
 
-.advantage__icon {
-  width: 60px;
-  height: 60px;
-  background-color: $leaf;
-}
-
-.advantage__icon::before {
+.advantages__item::before {
   display: block;
   content: "";
+  width: 60px;
+  height: 60px;
+  background-color: $icon-and-button-bg;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: 85%;
 }
 
-.advantages__icon--health::before {
-  width: 26px;
-  height: 29px;
+.advantages__item--health::before {
   background-image: url("../img/advantage-leaf@1x.png");
 }
 
-.advantages__icon--powder::before {
-  width: 29px;
-  height: 31px;
+.advantages__item--powder::before {
   background-image: url("../img/advantage-powder@1x.png");
 }
 
-.advantages__icon--saving::before {
-  width: 23px;
-  height: 30px;
+.advantages__item--saving::before {
   background-image: url("../img/advantage-dining@1x.png");
 }
 
-.advantages__icon--time::before {
-  width: 26px;
-  height: 31px;
+.advantages__item--time::before {
   background-image: url("../img/advantage-clock@1x.png");
 }
