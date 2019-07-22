@@ -8,6 +8,10 @@
   font-weight: 700;
 }
 
+.main-header__navigation {
+  text-align: center;
+}
+
 .main-navigation__list {
   @include ul-style-none();
 }
@@ -47,7 +51,12 @@
 @media (min-width: $desktop-width) {
   .main-header {
     position: absolute;
+    z-index: 1;
     width: 1440px;
     padding: 0 110px;
+  }
+
+  .main-navigation__link {
+    color: rgb(255, 255, 255);
   }
 }

@@ -1,5 +1,17 @@
 .diets {
-  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.diets__button,
+.diets__item {
+  margin: 0 20px;
+}
+
+.diets__item {
+  margin-bottom: 20px;
 }
 
 .diets__text-area {
@@ -68,3 +80,99 @@
   height: 28px;
   background-image: url("../img/icon-cat-pro.svg");
 }
+
+@media (min-width: $tablet-width) {
+  .diets {
+    width: $tablet-width;
+  }
+  
+  .diets__text-area {
+    width: 490px;
+    min-height: auto;
+    margin-left: 120px;
+    text-align: left;
+    color: rgb(17, 17, 17);
+    background-image: none;
+    background-color: transparent;
+  }
+  
+  .text-area__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  
+  .text-area__description {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .diets__button {
+    margin-left: 120px;
+  }
+  
+  .diets-item {
+    margin: 0 30px;
+  }
+
+  .diets__product {
+    display: none;
+  }
+
+  .diets__header::after {
+    content: "";
+    display: block;
+    width: 709px;
+    height: 609px;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .diets {
+    position: relative;
+    width: $desktop-width;
+  }
+
+  .diets__header {
+    min-height: 696px;
+    padding-top: 226px;
+  }
+
+  .diets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 720px;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: $icon-and-button-bg;
+  }
+  
+  .diets__header::after {
+    position: absolute;
+    top: 142px;
+    right: 328px;
+    width: 552px;
+    height: 499px;
+    background-image: url("../img/index-can-desktop@1x.png");
+  }
+
+  .text-area__title{
+    margin-top: 0;
+  }
+
+  .diets__container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .diets__item {
+    flex-basis: 570px;
+  }
+} 
