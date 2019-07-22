@@ -12,6 +12,7 @@
 
 .diets__item {
   margin-bottom: 20px;
+  background-color: #f2f2f2;
 }
 
 .diets__text-area {
@@ -27,10 +28,6 @@
 .diets__button {
   font-size: 14px;
   line-height: 1.29;
-}
-
-.diets__item {
-  background-color: #f2f2f2;
 }
 
 .diets__title {
@@ -85,7 +82,7 @@
   .diets {
     width: $tablet-width;
   }
-  
+
   .diets__text-area {
     width: 490px;
     min-height: auto;
@@ -95,12 +92,12 @@
     background-image: none;
     background-color: transparent;
   }
-  
+
   .text-area__title {
     font-size: 60px;
     line-height: 60px;
   }
-  
+
   .text-area__description {
     font-size: 20px;
     line-height: 20px;
@@ -109,7 +106,7 @@
   .diets__button {
     margin-left: 120px;
   }
-  
+
   .diets-item {
     margin: 0 30px;
   }
@@ -152,7 +149,7 @@
     background-repeat: no-repeat;
     background-color: $icon-and-button-bg;
   }
-  
+
   .diets__header::after {
     position: absolute;
     top: 142px;
@@ -162,7 +159,7 @@
     background-image: url("../img/index-can-desktop@1x.png");
   }
 
-  .text-area__title{
+  .text-area__title {
     margin-top: 0;
   }
 
@@ -170,9 +167,10 @@
     display: flex;
     justify-content: space-around;
     margin: 0;
+    padding: 0 70px;
   }
 
   .diets__item {
     flex-basis: 570px;
   }
-} 
+}
