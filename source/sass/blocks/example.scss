@@ -1,6 +1,12 @@
 .example {
-  min-width: 320px;
+  width: auto;
   background-color: #f2f2f2;
+}
+
+.example__container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .example__title {
@@ -30,4 +36,98 @@
   font-size: 14px;
   line-height: 1.43;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: transparent;
+  }
+
+  .example__container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .example__title,
+  .example__container-text,
+  .example__slider {
+    width: $tablet-width;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .example__container-text {
+    margin-bottom: 100px;
+  }
+
+  .example__slider {
+    position: absolute;
+    top: -105px;
+    left: 0;
+    right: 0;
+  }
+
+  .slider__list {
+    display: flex;
+  }
+
+  .example__container-slider {
+    position: relative;
+    width: auto;
+    min-height: 462px;
+    background-color: #f2f2f2;
+  }
+
+  .example__table-container {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__container-slider {
+    position: static;
+    min-height: auto;
+    background-color: transparent;
+  }
+
+  .example__title,
+  .example__container-text,
+  .example__slider {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .example__title,
+  .example__inner-wrapper {
+    width: $desktop-width;
+    padding: 0 110px;
+    margin: 0 auto;
+  }
+
+  .example__wrapper {
+    width: auto;
+    background-color: #f2f2f2;
+  }
+
+  .example__inner-wrapper {
+    position: relative;
+    width: $desktop-width;
+    min-height: 462px;
+  }
+
+  .example__description {
+    width: 450px;
+  }
+
+  .example__table-container {
+    display: block;
+  }
+
+  .example__slider {
+    width: 790px;
+    right: 0;
+    left: auto;
+  }
 }
