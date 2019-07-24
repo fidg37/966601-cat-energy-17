@@ -28,58 +28,60 @@
         программу питания для вашего кота
       </p>
       <form class="program__form" action="echo.htmlacademy.ru" method="POST">
-        <fieldset class="program__cat">
-          <legend class="visually-hidden">Информация о питомце</legend>
-          <ul class="program__list">
-            <li>
-              <label class="program__cat-input text-input">
-                Имя:*
-                <input type="text" name="name" placeholder="Барсик">
-              </label>
-            </li>
-            <li>
-              <label class="program__cat-input text-input">
-                Вес (кг):*
-                <input type="text" name="name" placeholder="7">
-              </label>
-            </li>
-            <li>
-              <label class="program__cat-input text-input">
-                Возраст (лет):
-                <input type="text" name="name" placeholder="7">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="program__diets">
-          <legend class="visually-hidden">Выбор режима питания</legend>
-          <ul class="program__list">
-            <li>
-              <label class="program__diet">
-                <input type="radio" name="diet" value="weight loss" checked>
-                Похудение
-              </label>
-            </li>
-            <li>
-              <label class="program__diet">
-                <input type="radio" name="diet" value="weight gain">
-                Набор массы
-              </label>
-            </li>
-            <li>
-              <label class="program__diet">
-                <input type="radio" name="diet" value="Need your tip">
-                Не знаю (Нужен ваш совет)
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="program__container">
+          <fieldset class="program__cat">
+            <legend class="visually-hidden">Информация о питомце</legend>
+            <ul class="program__list">
+              <li>
+                <label class="program__cat-input text-input">
+                  Имя:*
+                  <input type="text" name="name" placeholder="Барсик">
+                </label>
+              </li>
+              <li>
+                <label class="program__cat-input text-input">
+                  Вес (кг):*
+                  <input type="text" name="name" placeholder="7">
+                </label>
+              </li>
+              <li>
+                <label class="program__cat-input text-input">
+                  Возраст (лет):
+                  <input type="text" name="name" placeholder="7">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="program__diets">
+            <legend class="visually-hidden">Выбор режима питания</legend>
+            <ul class="program__list">
+              <li>
+                <label class="program__diet">
+                  <input type="radio" name="diet" value="weight loss" checked>
+                  Похудение
+                </label>
+              </li>
+              <li>
+                <label class="program__diet">
+                  <input type="radio" name="diet" value="weight gain">
+                  Набор массы
+                </label>
+              </li>
+              <li>
+                <label class="program__diet">
+                  <input type="radio" name="diet" value="Need your tip">
+                  Не знаю (Нужен ваш совет)
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <fieldset class="program__owner">
           <legend class="program__form-title">
             Контактные данные
             (владельца кота)
           </legend>
-          <ul class="program__list">
+          <ul class="program__list program__list--owner">
             <li>
               <label class="program__owner-input text-input">
                 E-mail:*
@@ -99,25 +101,25 @@
         <fieldset class="program__extra">
           <legend class="program__form-title">Дополнительно</legend>
           <ul class="program__list program__list--extra">
-            <li class="program__list-item">
+            <li class="program__list-item program__list-item--extra">
               <label class="program__extra-item">
                 <input type="checkbox" name="extra" value="sweetener" checked>
                 Сахарозаменитель
               </label>
             </li>
-            <li class="program__list-item">
+            <li class="program__list-item program__list-item--extra">
               <label class="program__extra-item">
                 <input type="checkbox" name="extra" value="water">
                 Питьевая вода
               </label>
             </li>
-            <li class="program__list-item">
+            <li class="program__list-item program__list-item--extra">
               <label class="program__extra-item">
                 <input type="checkbox" name="extra" value="milk">
                 Молоко
               </label>
             </li>
-            <li class="program__list-item">
+            <li class="program__list-item program__list-item--extra">
               <label class="program__extra-item">
                 <input type="checkbox" name="extra" value="vitamins">
                 Витамины
