@@ -1,3 +1,9 @@
+.extra-goods {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .extra-goods__title {
   font-size: 24px;
   line-height: 1;
@@ -5,4 +11,60 @@
 
 .extra-goods__list {
   @include ul-style-none();
+}
+
+.extra-goods__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media (min-width: $tablet-width) {
+  .extra-goods {
+    width: $tablet-width;
+  }
+
+  .extra-goods__title {
+    margin-left: 38px;
+  }
+
+  .extra-goods__item {
+    flex-direction: row;
+    padding: 0 38px;
+  }
+
+  .extra-card__container {
+    margin-left: auto;
+  }
+
+  .extra-card__button {
+    flex-basis: 600px;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra-goods {
+    display: flex;
+    flex-wrap: wrap;
+    width: $desktop-width;
+    padding: 0 110px;
+  }
+
+  .extra-goods__item {
+    margin-bottom: 20px;
+  }
+
+  .extra-goods__title {
+    width: 100%;
+  }
+
+  .extra-card__button {
+    flex-basis: 245px;
+    flex-grow: 0;
+  }
+
+  .extra-goods__list {
+    flex-basis: 800px;
+  }
 }
