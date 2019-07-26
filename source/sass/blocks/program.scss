@@ -1,7 +1,8 @@
-@import "mixins.scss";
-@import "variables.scss";
-
 .program {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
   fieldset {
     border: none;
     font-size: 16px;
@@ -38,8 +39,36 @@
 }
 
 .program__notification {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.14;
   color: #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .program {
+    width: $tablet-width;
+    padding: 0 69px;
+  }
+
+  .program__list--extra {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .program__list-item--extra {
+    flex-basis: 220px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    width: $desktop-width;
+    padding: 0 69px;
+  }
+
+  .program__container,
+  .program__list--owner {
+    display: flex;
+  }
 }

@@ -1,0 +1,57 @@
+.map {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.map__title {
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.map__address {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    width: $tablet-width;
+  }
+
+  .map__partnership {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .map__image {
+    content: url("../img/bg-map-tablet@1x.png");
+    width: 767px;
+    height: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    position: relative;
+    width: $desktop-width;
+  }
+
+  .map__image {
+    content: url("../img/bg-map-desktop@1x.png");
+    width: $desktop-width;
+    height: 400px;
+  }
+
+  .map__partnership {
+    position: absolute;
+    display: block;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    background-color: rgb(255, 255, 255);
+  }
+}

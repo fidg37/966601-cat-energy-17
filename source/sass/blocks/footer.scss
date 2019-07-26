@@ -1,0 +1,53 @@
+.main-footer {
+  width: auto;
+  background-color: #f2f2f2;
+}
+
+.main-footer__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.main-footer__inner-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer__copyright {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #444444;
+}
+
+.main-footer__academy-logo {
+  width: 27px;
+  height: 34px;
+  background-image: url("../img/htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer__container {
+    width: $desktop-width;
+    padding: 0 110px;
+  }
+}

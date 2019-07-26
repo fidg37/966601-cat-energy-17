@@ -1,0 +1,27 @@
+.social-list {
+  @include ul-style-none();
+}
+
+.social-list__item {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.social-list__item--vkontakte {
+  width: 22px;
+  height: 12px;
+  background-image: url("../img/icon-vk.svg");
+}
+
+.social-list__item--instagram {
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-insta.svg");
+}
+
+.social-list__item--facebook {
+  width: 10px;
+  height: 19px;
+  background-image: url("../img/icon-fb.svg");
+}
