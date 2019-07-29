@@ -6,4 +6,4 @@ menu.classList.remove("main-navigation--no-js");
 button.addEventListener ("click", function(evt) {
   evt.preventDefault();
   menu.classList.toggle("main-navigation--closed");
-})
+});

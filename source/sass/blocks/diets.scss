@@ -5,12 +5,13 @@
   margin: 0 auto;
 }
 
-.diets__button,
-.diets__item {
-  margin: 0 20px;
+.diets__header {
+  display: flex;
+  flex-direction: column;
 }
 
 .diets__item {
+  position: relative;
   margin-bottom: 20px;
   background-color: #f2f2f2;
 }
@@ -26,31 +27,62 @@
 }
 
 .diets__button {
+  padding-top: 12px;
+  padding-bottom: 10px;
   font-size: 14px;
-  line-height: 1.29;
+  line-height: 18px;
 }
 
 .diets__title {
+  padding-top: 30px;
+  padding-left: 92px;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 400;
   font-size: 24px;
   line-height: 1.54;
 }
 
 .diets__description {
+  width: 240px;
+  padding-top: 6px;
+  padding-bottom: 23px;
+  margin-left: 20px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
-  line-height: 1.29;
+  line-height: 18px;
   color: #444444;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .diets__link {
+  display: flex;
+  padding-top: 4px;
+  padding-left: 20px;
+  padding-bottom: 23px;
   text-decoration: none;
   font-size: 16px;
-  line-height: 1;
+  line-height: 16px;
   text-transform: uppercase;
   color: #111111;
 }
 
+.diets__link::after {
+  content: "";
+  align-self: center;
+  display: block;
+  width: 25px;
+  height: 12px;
+  margin-left: 10px;
+  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .diets__title::before {
+  position: absolute;
+  top: 24px;
+  left: 22px;
   display: block;
   content: "";
   width: 50px;
@@ -60,6 +92,7 @@
 }
 
 .diets__title::after {
+  position: absolute;
   display: block;
   content: "";
   background-repeat: no-repeat;
@@ -67,15 +100,34 @@
 }
 
 .diets--sitting-cat::after {
+  top: 22px;
+  left: 30px;
   width: 35px;
   height: 49px;
   background-image: url("../img/icon-cat-slim.svg");
 }
 
 .diets--walking-cat::after {
+  top: 35px;
+  left: 13px;
   width: 67px;
   height: 28px;
   background-image: url("../img/icon-cat-pro.svg");
+}
+
+@media (max-width: 767px) {
+  .diets {
+    padding: 0;
+  }
+
+  .diets__header {
+    min-height: 480px;
+    margin-bottom: 23px;
+  }
+
+  .diets__button {
+    margin-top: auto;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -83,46 +135,89 @@
     width: $tablet-width;
   }
 
+  .diets__header {
+    min-height: 820px;
+    margin-bottom: 17px;
+  }
+
   .diets__text-area {
     width: 490px;
     min-height: auto;
-    margin-left: 120px;
+    margin-left: 88px;
+    margin-bottom: 29px;
     text-align: left;
     color: rgb(17, 17, 17);
     background-image: none;
     background-color: transparent;
   }
 
-  .text-area__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .text-area__description {
+  .diets__button {
+    width: 245px;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    margin-left: 88px;
     font-size: 20px;
     line-height: 20px;
   }
 
-  .diets__button {
-    margin-left: 120px;
+  .diets__title {
+    padding-top: 78px;
+    padding-left: 53px;
+    margin-bottom: 18px;
+    font-size: 36px;
+    line-height: 37px;
   }
 
-  .diets-item {
-    margin: 0 30px;
+  .diets__title::before {
+    top: 92px;
+    left: auto;
+    right: 62px;
+    width: 200px;
+    height: 200px;
   }
 
-  .diets__product {
-    display: none;
+  .diets--sitting-cat::after {
+    top: 80px;
+    left: auto;
+    right: 92px;
+    width: 141px;
+    height: 194px;
   }
 
-  .diets__header::after {
-    content: "";
-    display: block;
-    width: 709px;
-    height: 609px;
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+  .diets--walking-cat::after {
+    top: 135px;
+    left: auto;
+    right: 28px;
+    width: 268px;
+    height: 113px;
+  }
+
+  .diets__description {
+    width: 380px;
+    margin-left: 53px;
+    margin-bottom: 29px;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
+
+  .diets__item:last-child .diets__description {
+    width: 340px;
+  }
+
+  .diets__link {
+    padding-left: 52px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .diets__link::after {
+    margin-left: 24px;
+  }
+
+  .diets__item {
+    min-height: 372px;
+    margin-bottom: 30px;
   }
 }
 
@@ -134,7 +229,17 @@
 
   .diets__header {
     min-height: 696px;
-    padding-top: 226px;
+    padding-top: 194px;
+    margin-bottom: 80px;
+  }
+
+  .diets__text-area {
+    margin-left: 80px;
+    margin-bottom: 34px;
+  }
+
+  .diets__button {
+    margin-left: 80px;
   }
 
   .diets::before {
@@ -159,18 +264,51 @@
     background-image: url("../img/index-can-desktop@1x.png");
   }
 
-  .text-area__title {
-    margin-top: 0;
-  }
-
   .diets__container {
     display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0 70px;
+    justify-content: space-between;
   }
 
   .diets__item {
     flex-basis: 570px;
+  }
+
+  .diets__title {
+    padding-top: 77px;
+    padding-left: 214px;
+    margin-bottom: 67px;
+  }
+
+  .diets__description {
+    width: 470px;
+    margin-bottom: 4px;
+  }
+
+  .diets__item:last-child .diets__description {
+    width: 460px;
+  }
+
+  .diets__title::before {
+    top: 47px;
+    left: 52px;
+    right: auto;
+    width: 100px;
+    height: 100px;
+  }
+
+  .diets--sitting-cat::after {
+    top: 41px;
+    left: 65px;
+    right: auto;
+    width: 71px;
+    height: 97px;
+  }
+
+  .diets--walking-cat::after {
+    top: 69px;
+    left: 34px;
+    right: auto;
+    width: 134px;
+    height: 57px;
   }
 }

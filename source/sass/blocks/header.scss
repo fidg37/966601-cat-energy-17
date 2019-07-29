@@ -2,8 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
@@ -22,6 +20,9 @@
 }
 
 @media (max-width: 767px) {
+  .main-header {
+    padding: 0;
+  }
 
   .main-header__navigation {
     text-align: center;
@@ -47,8 +48,8 @@
 
   .main-navigation__link {
     padding-top: 23px;
-    padding-bottom: 23px;
-    border-bottom: 1px solid #e6e6e6; 
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .main-navigation__toggle {
@@ -74,17 +75,16 @@
   .main-header__logo {
     margin-top: 24px;
   }
-  
+
   .main-header__logo-image {
     content: url("../img/logo-tablet.svg");
     width: 174px;
     height: 59px;
   }
-  
+
   .main-header {
     flex-direction: row;
-    width: auto;
-    padding: 0 30px;
+    margin-bottom: 28px;
   }
 
   .main-header__navigation {
@@ -98,7 +98,7 @@
   .main-navigation__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 32px;
+    margin-top: 33px;
     font-size: 18px;
     font-weight: normal;
     line-height: 25px;
@@ -111,7 +111,7 @@
 
   .main-navigation__link {
     padding-top: 9px;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
   }
 
   .main-navigation__item--active a {
@@ -122,9 +122,10 @@
 @media (min-width: $desktop-width) {
   .main-header {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
-    width: 1440px;
-    padding: 0 110px;
   }
 
   .main-header__logo {
