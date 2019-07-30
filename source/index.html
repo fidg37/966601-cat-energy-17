@@ -80,16 +80,16 @@
                 по-прежнему спит по 16 часов в день.
               </p>
               <div class="example__table-container">
-                <table class="example__result-table">
-                  <tr>
-                    <td class="example__value">5 кг</td>
-                    <td class="example__value">60 дней</td>
-                  </tr>
-                  <tr>
-                    <td class="example__parameter">снижение веса</td>
-                    <td class="example__parameter">затрачено времени</td>
-                  </tr>
-                </table>
+                <div class="example__result">
+                  <div class="example__result-item">
+                    <span class="example__value">5 кг</span>
+                    <span class="example__parameter">снижение веса</span>
+                  </div>
+                  <div class="example__result-item">
+                    <span class="example__value">60 дней</span>
+                    <span class="example__parameter">затрачено времени</span>
+                  </div>
+                </div>
                 <p class="example__cost">
                   <span class="example__cost-parameter">Затраты на питание:</span>
                   <span class="example__cost-value"> 15 000 руб.</span>
@@ -99,17 +99,19 @@
             <div class="example__container-slider">
               <div class="example__slider slider">
                 <ul class="slider__list">
-                  <li class="slider__first-slide slider__first-slide--active">
-                    <img class="slider__image" src="img/before-mobile@1x.png" width="311" height="232" alt="Дородный котяра">
+                  <li class="slider__item slider__item--fat-cat slider__item--active">
                   </li>
-                  <li class="slider__first-slide">
-                    <img class="slider__image" src="img/after-mobile@1x.png" width="311" height="232" alt="Стройный котяра">
+                  <li class="slider__item slider__item--slim-cat">
                   </li>
                 </ul>
-                <div class="slider__pagination pagination">
-                  <span class="pagination__description">Было</span>
-                  <span class="pagination__item"></span>
-                  <span class="pagination__description">Стало</span>
+                <div class="slider__pagination">
+                  <span class="slider__pagination-label">Было</span>
+                  <ul class="slider__pagination-list">
+                    <li class="slider__pagination-item slider__pagination-item--active"></li>
+                    <li class="slider__pagination-item"></li>
+                    <li class="slider__pagination-item"></li>
+                  </ul>
+                  <span class="slider__pagination-label">Стало</span>
                 </div>
               </div>
             </div>

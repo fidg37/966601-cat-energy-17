@@ -1,3 +1,7 @@
+.advantages {
+  margin-bottom: 33px;
+}
+
 .advantages__title {
   margin-top: 0;
   font-size: 36px;
@@ -53,6 +57,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .advantages {
+    margin-bottom: 0;
+  }
+
   .advantages__title {
     margin-bottom: 72px;
     font-size: 60px;
@@ -69,13 +77,14 @@
     position: relative;
     flex-direction: column;
     flex-basis: 324px;
-    margin-bottom: 118px;
+    margin-bottom: 74px;
   }
 
   .advantages__description {
     width: 245px;
     padding-left: 0;
     padding-top: 31px;
+    padding-bottom: 44px;
     font-size: 16px;
     line-height: 24px;
   }
