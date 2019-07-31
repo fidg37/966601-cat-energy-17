@@ -154,4 +154,12 @@
   .main-navigation__item--active a {
     border-color: rgb(255, 255, 255);
   }
+
+  .main-header--light-bg .main-navigation__link {
+    color: #111111;
+  }
+
+  .main-header--light-bg .main-navigation__item--active a {
+    border-color: $icon-and-button-bg;
+  }
 }
