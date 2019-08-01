@@ -3,6 +3,7 @@
 
   display: flex;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 767px) {
@@ -44,6 +45,7 @@
 @media (min-width: $tablet-width) {
   .social-list {
     margin-left: 156px;
+    padding-bottom: 0px;
   }
 
   .social-list__item--vkontakte a {

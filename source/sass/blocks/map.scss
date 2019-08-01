@@ -29,6 +29,12 @@
   color: #444444;
 }
 
+@media (max-width: 1439px) {
+  .map--dark .map__partnership {
+    background-color: #f2f2f2;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .map__partnership {
     justify-content: space-between;
