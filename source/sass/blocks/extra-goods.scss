@@ -41,7 +41,7 @@
     margin-bottom: 69px;
     padding-top: 51px;
   }
-  
+
   .extra-goods__title {
     display: block;
     top: -55px;
@@ -66,6 +66,7 @@
   }
 
   .extra-goods__list {
+    flex-basis: 895px;
     margin-left: 110px;
   }
 
@@ -81,9 +82,5 @@
   .extra-card__button {
     flex-basis: 245px;
     flex-grow: 0;
-  }
-
-  .extra-goods__list {
-    flex-basis: 895px;
   }
 }
