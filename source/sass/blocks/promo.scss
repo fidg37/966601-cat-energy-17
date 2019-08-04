@@ -1,13 +1,30 @@
 .promo {
   width: 280px;
   height: 289px;
+  margin: 0 20px;
+  padding-top: 65px;
+  text-align: center;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: $icon-and-button-bg;
 }
 
+.promo::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 61px;
+  margin: 0 auto;
+  margin-bottom: 61px;
+  background-image: url("../img/icon-gift.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .promo__text {
+  width: 180px;
+  margin: 0 auto;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.25;
@@ -15,18 +32,37 @@
 }
 
 @media (min-width: $tablet-width) {
-  .extra-goods__promo {
+  .promo {
     width: 708px;
     height: 200px;
+    margin: 0 30px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
   }
 }
 
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .promo {
+    display: flex;
+  }
+
+  .promo::before {
+    margin-left: 90px;
+  }
+
+  .promo__text {
+    margin-top: 7px;
+    margin-right: 104px;
+    text-align: left;
+  }
+}
+
 @media (min-width: $desktop-width) {
-  .extra-goods__promo {
+  .promo {
     width: 245px;
     height: 289px;
+    margin-top: 52px;
     margin-left: auto;
+    margin-right: 110px;
     background-image: url("../../img/gift-photo-desktop@1x.jpg");
   }
 }

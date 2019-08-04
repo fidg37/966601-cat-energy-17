@@ -8,30 +8,30 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <a class="main-header__logo" href="index.html">
+    <header class="main-header container main-header--light-bg">
+      <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип интернет-магазина Cat Energy">
       </a>
-      <nav class="main-header__navigation main-navigation">
+      <nav class="main-header__navigation main-navigation main-navigation--no-js main-navigation--closed">
         <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-navigation__list">
-          <li class="main-navigation__item"><a href="index.html">Главная</a></li>
-          <li class="main-navigation__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="main-navigation__item main-navigation__item--active"><a>Подбор программы</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link" href="index.html">Главная</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="main-navigation__item main-navigation__item--active"><a class="main-navigation__link">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
     <section class="program">
-      <h1 class="program__title">Подбор программы</h1>
-      <p class="program__text">
+      <h1 class="program__title container">Подбор программы</h1>
+      <p class="program__text container">
         Заполните анкету и мы подберем
         программу питания для вашего кота
       </p>
       <form class="program__form" action="echo.htmlacademy.ru" method="POST">
         <div class="program__container">
-          <fieldset class="program__cat">
+          <fieldset class="program__field program__cat container">
             <legend class="visually-hidden">Информация о питомце</legend>
-            <ul class="program__list">
+            <ul class="program__list program__list--text">
               <li>
                 <label class="program__cat-input text-input">
                   Имя:*
@@ -52,76 +52,86 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="program__diets">
+          <fieldset class="program__field program__diets">
             <legend class="visually-hidden">Выбор режима питания</legend>
             <ul class="program__list">
               <li>
-                <label class="program__diet">
-                  <input type="radio" name="diet" value="weight loss" checked>
+                <label class="program__diets-label">
+                  <input class="program__radio visually-hidden" type="radio" name="diet" value="weight loss" checked>
+                  <span class="program__radio-custom"></span>
                   Похудение
                 </label>
               </li>
               <li>
-                <label class="program__diet">
-                  <input type="radio" name="diet" value="weight gain">
+                <label class="program__diets-label">
+                  <input class="program__radio visually-hidden" type="radio" name="diet" value="weight gain">
+                  <span class="program__radio-custom"></span>
                   Набор массы
                 </label>
               </li>
               <li>
-                <label class="program__diet">
-                  <input type="radio" name="diet" value="Need your tip">
+                <label class="program__diets-label">
+                  <input class="program__radio visually-hidden" type="radio" name="diet" value="Need your tip">
+                  <span class="program__radio-custom"></span>
                   Не знаю (Нужен ваш совет)
                 </label>
               </li>
             </ul>
           </fieldset>
         </div>
-        <fieldset class="program__owner">
+        <fieldset class="program__field program__owner container">
           <legend class="program__form-title">
             Контактные данные
             (владельца кота)
           </legend>
-          <ul class="program__list program__list--owner">
+          <ul class="program__list program__list--text">
             <li>
               <label class="program__owner-input text-input">
                 E-mail:*
                 <input type="email" name="email" placeholder="kuklachev@gmail.com">
+                <svg class="program__icon-mail" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
+                  <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+                </svg>
               </label>
             </li>
             <li>
-              <label class="program__owner-input text-input">
+              <label class="program__owner-input program__owner-input--phone text-input">
                 Телефон:*
                 <input type="tel" name="tel" placeholder="8 (960) 900-60-90">
               </label>
             </li>
           </ul>
-          <h2 class="program__form-title">Комментарий</h2>
+          <h2 class="program__form-title program__form-title--comment">Комментарий</h2>
           <textarea class="program__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="program__extra">
+        <fieldset class="program__field program__extra container">
           <legend class="program__form-title">Дополнительно</legend>
           <ul class="program__list program__list--extra">
             <li class="program__list-item program__list-item--extra">
               <label class="program__extra-item">
-                <input type="checkbox" name="extra" value="sweetener" checked>
+                <input class="program__checkbox visually-hidden" type="checkbox" name="extra" value="sweetener" checked>
+                <span class="program__checkbox-custom"></span>
                 Сахарозаменитель
               </label>
             </li>
             <li class="program__list-item program__list-item--extra">
               <label class="program__extra-item">
-                <input type="checkbox" name="extra" value="water">
+                <input class="program__checkbox visually-hidden" type="checkbox" name="extra" value="water">
+                <span class="program__checkbox-custom"></span>
                 Питьевая вода
               </label>
             </li>
             <li class="program__list-item program__list-item--extra">
               <label class="program__extra-item">
-                <input type="checkbox" name="extra" value="milk">
+                <input class="program__checkbox visually-hidden" type="checkbox" name="extra" value="milk">
+                <span class="program__checkbox-custom"></span>
                 Молоко
               </label>
             </li>
             <li class="program__list-item program__list-item--extra">
               <label class="program__extra-item">
-                <input type="checkbox" name="extra" value="vitamins">
+                <input class="program__checkbox visually-hidden" type="checkbox" name="extra" value="vitamins">
+                <span class="program__checkbox-custom"></span>
                 Витамины
               </label>
             </li>
@@ -131,7 +141,7 @@
         </fieldset>
       </form>
     </section>
-    <section class="map">
+    <section class="map container map--dark">
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="map__partnership">
         <p class="map__title">
@@ -141,23 +151,27 @@
         </p>
         <address class="map__address">
           ул. Большая Конюшенная, д. 19/8
-          Санкт-Петербург
+          <span>Санкт-Петербург</span>
         </address>
       </div>
-      <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      <img class="map__image" src="img/map-mobile.png" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
     </section>
     <footer class="main-footer">
-      <a class="main-footer__logo" href="index.html">
-        <img class="main-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип интернет-магазина Cat Energy">
-      </a>
-      <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <ul class="main-footer__list social-list">
-        <li><a class="social-list__item social-list__item--vkontakte" href="#" aria-label="В контакте"></a></li>
-        <li><a class="social-list__item social-list__item--instagram" href="#" aria-label="Instagram"></a></li>
-        <li><a class="social-list__item social-list__item--facebook" href="#" aria-label="Facebook"></a></li>
-      </ul>
-      <small class="main-footer__copyright">HTML Academy</small>
-      <div class="main-footer__academy-logo"></div>
+      <div class="main-footer__container">
+        <a class="main-footer__logo">
+          <img class="main-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип интернет-магазина Cat Energy">
+        </a>
+        <ul class="main-footer__list social-list">
+          <li class="social-list__item social-list__item--vkontakte"><a href="#" aria-label="В контакте"></a></li>
+          <li class="social-list__item social-list__item--instagram"><a href="#" aria-label="Instagram"></a></li>
+          <li class="social-list__item social-list__item--facebook"><a href="#" aria-label="Facebook"></a></li>
+        </ul>
+        <div class="main-footer__inner-container">
+          <small class="main-footer__copyright">HTML Academy</small>
+          <div class="main-footer__academy-logo"></div>
+        </div>
+      </div>
     </footer>
+    <script src="js/navigation-menu.js"></script>
   </body>
 </html>

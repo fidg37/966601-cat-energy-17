@@ -1,14 +1,8 @@
-.program {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  fieldset {
-    border: none;
-    font-size: 16px;
-    line-height: 1.13;
-    color: #222222;
-  }
+.program__field {
+  border: none;
+  font-size: 16px;
+  line-height: 1.13;
+  color: #222222;
 }
 
 .program__list {
@@ -16,59 +10,492 @@
 }
 
 .program__title {
+  margin-top: 15px;
+  margin-bottom: 26px;
+  font-weight: 400;
   font-size: 36px;
   line-height: 1.67;
 }
 
 .program__text {
+  width: 320px;
+  margin-bottom: 40px;
+  padding-right: 30px;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 1.29;
 }
 
+.program__diets,
+.program__cat,
+.program__owner {
+  position: relative;
+}
+
+.program__cat {
+  padding-bottom: 11px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.program__diets {
+  padding: 0 20px;
+  padding-top: 27px;
+  margin: 0;
+  margin-bottom: 30px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
+.program__owner {
+  padding-bottom: 10px;
+  margin-bottom: 17px;
+}
+
+.program__list input::placeholder {
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.program__list label {
+  text-transform: uppercase;
+}
+
+.program__list--text li {
+  margin-bottom: 13px;
+}
+
+.program__list--text li:last-child {
+  margin-bottom: 0;
+}
+
+.program__list--text label {
+  display: flex;
+  align-items: baseline;
+}
+
+.program__list--text input {
+  flex-grow: 1;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  padding-left: 12px;
+  margin-left: 15px;
+}
+
 .program__form-title {
+  position: relative;
+  margin-bottom: 33px;
   font-size: 24px;
   line-height: 1;
   color: #111111;
   font-weight: 400;
+  background-color: rgb(255, 255, 255);
+}
+
+.program__diets li {
+  margin-bottom: 25px;
+}
+
+.program__diets-label {
+  position: relative;
+  padding-left: 47px;
+}
+
+.program__radio-custom {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 30px;
+  height: 30px;
+  border: 9px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #d8d8d8;
+}
+
+.program__radio:checked + span {
+  background-color: $icon-and-button-bg;
+}
+
+.program__radio:focus + span {
+  outline: 1px;
+}
+
+@media (max-width: 767px) {
+  .program__owner .program__form-title:first-child {
+    width: 200px;
+  }
+}
+
+.program__form-title--comment {
+  width: 142px;
+  margin-bottom: 35px;
+}
+
+.program__owner-input {
+  position: relative;
+}
+
+.program__icon-mail,
+.program__owner-input--phone::after {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 17px;
+}
+
+.program__owner-input--phone::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../../img/icon-phone.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.program__form-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  z-index: -1;
+  width: 300px;
+  height: 3px;
+  background-color: $icon-and-button-bg;
+}
+
+.program__owner .program__list {
+  margin-bottom: 29px;
+}
+
+.program__comment {
+  width: 100%;
+  min-height: 150px;
+  padding: 11px 13px;
+  resize: none;
+}
+
+.program__comment::placeholder {
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.program__extra .program__form-title {
+  padding-right: 23px;
+  margin-bottom: 39px;
+}
+
+.program__extra-item {
+  position: relative;
+  padding-left: 46px;
+}
+
+.program__checkbox-custom {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border: 1px solid #cfcfcf;
+}
+
+.program__checkbox:checked + .program__checkbox-custom {
+  background-image: url("../img/icon-tick.svg");
+  background-size: 70%;
+}
+
+.program__list--extra li {
+  margin-bottom: 25px;
+}
+
+.program__list--extra {
+  margin-bottom: 40px;
 }
 
 .program-button {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 23px;
   font-size: 16px;
   line-height: 1.25;
   border: none;
 }
 
 .program__notification {
+  display: block;
+  width: 100%;
+  text-align: center;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.14;
   color: #444444;
 }
 
+.program__extra {
+  margin-bottom: 30px;
+}
+
 @media (min-width: $tablet-width) {
   .program {
+    padding-top: 28px;
+  }
+
+  .program__title {
+    margin-top: 0;
+    margin-bottom: 55px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .program__text {
     width: $tablet-width;
-    padding: 0 69px;
+    padding-left: 71px;
+    padding-right: 335px;
+    margin-bottom: 67px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program__list--text input {
+    padding-top: 12px;
+    padding-left: 19px;
+  }
+
+  .program__list--text li {
+    margin-bottom: 20px;
+  }
+
+  .program__cat {
+    padding: 0 71px;
+    margin-bottom: 74px;
+  }
+
+  .program__field {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program__diets {
+    width: 630px;
+    margin: 0 auto;
+    margin-bottom: 74px;
+    padding: 0 40px;
+    padding-top: 33px;
+    padding-bottom: 2px;
+    border: 1px solid #ededed;
+  }
+
+  .program__diets li {
+    margin-bottom: 33px;
+  }
+
+  .program__radio-custom {
+    top: -4px;
+    left: -13px;
+    width: 40px;
+    height: 40px;
+    border: 10.5px solid rgb(255, 255, 255);
+  }
+
+  .program__form-title {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 77px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .program__form-title::after {
+    width: $tablet-width;
+    top: 23px;
+    left: -30px;
+  }
+
+  .program__owner .program__list {
+    padding: 0 40px;
+    margin-bottom: 66px;
+  }
+
+  .program__icon-mail {
+    top: 19px;
+  }
+
+  .program__owner-input--phone::after {
+    top: 16px;
+  }
+
+  .program__comment {
+    width: 630px;
+    height: 173px;
+    margin: 0 40px;
+    padding-bottom: 30px;
+    padding-left: 18px;
+  }
+
+  .program__form-title--comment {
+    width: 259px;
+  }
+
+  .program__owner {
+    margin-bottom: 54px;
+  }
+
+  .program__extra {
+    margin-bottom: 49px;
   }
 
   .program__list--extra {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 40px;
+    padding-top: 27px;
+    margin-bottom: 12px;
   }
 
   .program__list-item--extra {
-    flex-basis: 220px;
+    flex-basis: 230px;
+    margin-right: 114px;
+  }
+
+  .program__list--extra li {
+    margin-bottom: 53px;
+  }
+
+  @media (max-width: 1439px) {
+    .program__list-item--extra:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .program__extra-item {
+    padding-left: 59px;
+  }
+
+  .program__checkbox-custom {
+    width: 40px;
+    height: 40px;
+  }
+
+  .program__checkbox:checked + .program__checkbox-custom {
+    background-size: 58%;
+  }
+
+  .program-button {
+    width: 284px;
+    margin-left: 40px;
+    margin-right: 57px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program__notification {
+    display: initial;
+    width: auto;
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .program {
+    padding-top: 189px;
+  }
+
+  .program__container {
     width: $desktop-width;
-    padding: 0 69px;
+    margin: 0 auto;
+    margin-bottom: 67px;
+  }
+
+  .program__text {
+    width: $desktop-width;
+    padding-left: 111px;
+    padding-right: 955px;
+  }
+
+  .program__cat {
+    margin: 0;
+    padding: 0;
+    width: 679px;
+    padding-left: 111px;
+    margin-right: 81px;
+  }
+
+  .program__diets {
+    width: 570px;
+    margin: 0;
+  }
+
+  .program__owner,
+  .program__extra {
+    padding: 0;
+  }
+
+  .program__extra {
+    margin-bottom: 59px;
   }
 
   .program__container,
   .program__list--owner {
     display: flex;
+  }
+
+  .program__form-title {
+    margin-left: 69px;
+  }
+
+  .program__form-title::after {
+    width: $desktop-width;
+    left: -69px;
+  }
+
+  .program__owner .program__list {
+    display: flex;
+    padding: 0 112px;
+    margin-bottom: 47px;
+  }
+
+  .program__owner li {
+    width: 565px;
+    margin-right: 81px;
+  }
+
+  .program__owner li:nth-child(2n) {
+    margin: 0;
+  }
+
+  .program__comment {
+    width: 1220px;
+    margin: 0 110px;
+    margin-bottom: 12px;
+  }
+
+  .program__list--extra {
+    padding: 0 110px;
+    padding-top: 27px;
+  }
+
+  .program__list-item--extra {
+    margin-right: 95px;
+  }
+
+  .program__list-item--extra:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .program__list--extra li {
+    margin-bottom: 61px;
+  }
+
+  .program-button {
+    width: 568px;
+    margin-left: 111px;
   }
 }

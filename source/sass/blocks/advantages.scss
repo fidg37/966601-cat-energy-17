@@ -1,12 +1,12 @@
 .advantages {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin-bottom: 33px;
 }
 
 .advantages__title {
+  margin-top: 0;
   font-size: 36px;
-  line-height: 1.67;
+  font-weight: 400;
+  line-height: 60px;
 }
 
 .advantages__list {
@@ -14,6 +14,9 @@
 }
 
 .advantages__description {
+  margin-top: 0;
+  padding-left: 20px;
+  padding-top: 2px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.29;
@@ -22,6 +25,7 @@
 
 .advantages__item {
   display: flex;
+  margin-bottom: 11px;
 }
 
 .advantages__item::before {
@@ -54,19 +58,41 @@
 
 @media (min-width: $tablet-width) {
   .advantages {
-    width: $tablet-width;
+    margin-bottom: 0;
+  }
+
+  .advantages__title {
+    margin-bottom: 72px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .advantages__item {
     position: relative;
     flex-direction: column;
-    flex-basis: 364px;
-    margin-bottom: 130px;
+    flex-basis: 324px;
+    margin-bottom: 74px;
+  }
+
+  .advantages__description {
+    width: 245px;
+    padding-left: 0;
+    padding-top: 31px;
+    padding-bottom: 44px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .advantages__item::before {
+    width: 80px;
+    height: 80px;
+    background-size: 62%;
   }
 
   .advantages__item::after {
@@ -74,7 +100,6 @@
     position: absolute;
     z-index: -1;
     top: -40px;
-    left: 154px;
     display: block;
     font-size: 281px;
     line-height: 281px;
@@ -83,28 +108,27 @@
 
   .advantages__item--health::after {
     content: "1";
+    left: 118px;
   }
 
   .advantages__item--powder::after {
     content: "2";
+    left: 111px;
   }
 
   .advantages__item--saving::after {
     content: "3";
+    left: 113px;
   }
 
   .advantages__item--time::after {
     content: "4";
+    left: 113px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .advantages {
-    width: $desktop-width;
-    padding: 0 110px;
-  }
-
   .advantages__item {
-    flex-basis: 305px;
+    flex-basis: 240px;
   }
 }

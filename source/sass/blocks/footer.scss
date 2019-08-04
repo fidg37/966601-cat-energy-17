@@ -1,4 +1,6 @@
 .main-footer {
+  padding-top: 40px;
+  margin-top: -3px;
   width: auto;
   background-color: #f2f2f2;
 }
@@ -6,15 +8,18 @@
 .main-footer__container {
   display: flex;
   flex-direction: column;
-  text-align: center;
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.social-list {
-  display: flex;
-  justify-content: center;
+@media (max-width: 767px) {
+  .main-footer__logo {
+    padding-bottom: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+    border-bottom: 1px solid #d9d9d9;
+  }
 }
 
 .main-footer__inner-container {
@@ -23,6 +28,7 @@
 }
 
 .main-footer__copyright {
+  padding-top: 9px;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -32,16 +38,34 @@
 .main-footer__academy-logo {
   width: 27px;
   height: 34px;
-  background-image: url("../img/htmlacademy.svg");
+  background-image: url("../../img/htmlacademy-svg.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 @media (min-width: $tablet-width) {
+  .main-footer {
+    padding-top: 56px;
+    padding-bottom: 5px;
+  }
+
   .main-footer__container {
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
     width: $tablet-width;
+    padding: 0 30px;
+  }
+
+  .main-footer__logo {
+    padding-top: 8px;
+  }
+
+  .main-footer__inner-container {
+    margin-left: auto;
+  }
+
+  .main-footer__copyright {
+    margin-right: 22px;
   }
 }
 
