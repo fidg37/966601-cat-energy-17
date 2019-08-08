@@ -43,18 +43,18 @@
 
   .product-card__image {
     position: absolute;
+    left: 0;
+    right: 0;
+    width: 324px;
+    margin: 0 auto;
   }
 
   .product-card__image--small {
-    top: -63px;
-    width: 161px;
-    height: 172px;
+    top: -47px;
   }
 
   .product-card__image--big {
-    top: -100px;
-    width: 195px;
-    height: 208px;
+    top: -83px;
   }
 
   .product-card__table {
