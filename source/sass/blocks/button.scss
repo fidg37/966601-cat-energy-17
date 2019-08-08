@@ -5,3 +5,11 @@
   color: rgb(255, 255, 255);
   background-color: $icon-and-button-bg;
 }
+
+.button:hover {
+  background-color: rgb(94, 170, 47);
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}

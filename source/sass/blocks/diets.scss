@@ -25,6 +25,11 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: $icon-and-button-bg;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px 100%;
+  }
 }
 
 .diets__button {
@@ -78,6 +83,15 @@
   background-image: url("../../img/icon-right-arrow-long.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+.diets__link:hover::after {
+  width: 34px;
+  background-image: url("../../img/icon-right-arrow-verylong.svg");
+}
+
+.diets__link:active {
+  opacity: 0.3;
 }
 
 .diets__title::before {
@@ -235,14 +249,31 @@
 @media (min-width: $desktop-width) {
   .diets {
     position: relative;
-    width: $desktop-width;
+    width: auto;
+    padding: 0;
     margin-bottom: 43px;
   }
 
-  .diets__header {
-    min-height: 696px;
-    padding-top: 194px;
+  .diets__wrapper {
     margin-bottom: 80px;
+    background: linear-gradient(to right, rgb(255, 255, 255) 50%, #64a83b 50%);
+  }
+
+  .diets__header {
+    position: relative;
+    width: $desktop-width;
+    min-height: 696px;
+    padding: 0 110px;
+    padding-top: 194px;
+    margin: 0 auto;
+  }
+
+  .diets__container {
+    display: flex;
+    justify-content: space-between;
+    width: $desktop-width;
+    padding: 0 110px;
+    margin: 0 auto;
   }
 
   .diets__text-area {
@@ -254,7 +285,7 @@
     margin-left: 80px;
   }
 
-  .diets::before {
+  .diets__header::before {
     content: "";
     position: absolute;
     top: 0;
@@ -265,6 +296,11 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-color: $icon-and-button-bg;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px 100%;
+    }
   }
 
   .diets__header::after {
@@ -274,11 +310,6 @@
     width: 552px;
     height: 499px;
     background-image: url("../img/index-can-desktop@1x.png");
-  }
-
-  .diets__container {
-    display: flex;
-    justify-content: space-between;
   }
 
   .diets__item {

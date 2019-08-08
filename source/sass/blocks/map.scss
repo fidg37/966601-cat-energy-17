@@ -29,6 +29,18 @@
   color: #444444;
 }
 
+@media (max-width: 767px) {
+  .map__container {
+    height: 366px;
+    overflow: hidden;
+  }
+
+  .map__image {
+    position: relative;
+    top: -37px;
+  }
+}
+
 @media (max-width: 1439px) {
   .map--dark .map__partnership {
     background-color: #f2f2f2;
@@ -62,7 +74,6 @@
   }
 
   .map__image {
-    content: url("../img/bg-map-tablet@1x.png");
     width: 767px;
     height: 400px;
   }
@@ -70,7 +81,6 @@
 
 @media (min-width: $desktop-width) {
   .map__image {
-    content: url("../img/bg-map-desktop@1x.png");
     width: $desktop-width;
     height: 400px;
   }
