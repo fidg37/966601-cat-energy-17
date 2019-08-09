@@ -18,10 +18,20 @@
 
 .slider__item--fat-cat {
   background-image: url("../img/before-mobile@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+    background-size: 311px 100%;
+  }
 }
 
 .slider__item--slim-cat {
   background-image: url("../img/after-mobile@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/after-mobile@2x.png");
+    background-size: 311px 100%;
+  }
 }
 
 .slider__item--active {
@@ -95,14 +105,24 @@
 
   .slider__item--fat-cat {
     left: 0;
-    background-image: url("../../img/before-tablet@1x.png");
+    background-image: url("../img/before-tablet@1x.png");
     background-position: 46px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+      background-size: 690px 100%;
+    }
   }
 
   .slider__item--slim-cat {
     right: 0;
-    background-image: url("../../img/after-tablet@1x.png");
+    background-image: url("../img/before-tablet@1x.png");
     background-position: -338px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-tablet@2x.png");
+      background-size: 690px 100%;
+    }
   }
 
   .slider__pagination {
@@ -166,13 +186,23 @@
 
   .slider__item--fat-cat {
     left: 11px;
-    background-image: url("../../img/before-tablet@1x.png");
+    background-image: url("../img/before-desktop@1x.png");
     background-position: 19px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-desktop@2x.png");
+      background-size: 690px 100%;
+    }
   }
 
   .slider__item--slim-cat {
     right: 11px;
-    background-image: url("../../img/after-tablet@1x.png");
+    background-image: url("../img/after-desktop@1x.png");
     background-position: -365px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-desktop@2x.png");
+      background-size: 690px 100%;
+    }
   }
 }

@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="main-header container">
       <a class="main-header__logo">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип интернет-магазина Cat Energy">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип интернет-магазина Cat Energy">
+        </picture>
       </a>
       <nav class="main-header__navigation main-navigation main-navigation--no-js main-navigation--closed">
         <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
@@ -22,13 +28,15 @@
       </nav>
     </header>
     <section class="diets container">
-      <div class="diets__header">
-        <div class="diets__text-area text-area">
-          <h1 class="text-area__title">Функциональное питание для котов</h1>
-          <p class="text-area__description">Занялся собой? Займись котом!</p>
+      <diets class="diets__wrapper">
+        <div class="diets__header">
+          <div class="diets__text-area text-area">
+            <h1 class="text-area__title">Функциональное питание для котов</h1>
+            <p class="text-area__description">Занялся собой? Займись котом!</p>
+          </div>
+          <a class="diets__button button" href="program.html">Подобрать программу</a>
         </div>
-        <a class="diets__button button" href="#">Подобрать программу</a>
-      </div>
+      </diets>
       <h2 class="visually-hidden">Режимы питания</h2>
       <div class="diets__container">
         <div class="diets__item">
@@ -38,7 +46,7 @@
             по деревьям? Пора на диету! Cat Energy Slim поможет вашему
             питомцу сбросить лишний вес.
           </p>
-          <a class="diets__link" href="#">Каталог Slim</a>
+          <a class="diets__link" href="catalog.html">Каталог Slim</a>
         </div>
         <div class="diets__item">
           <h3 class="diets__title diets--walking-cat">Набор массы</h3>
@@ -46,7 +54,7 @@
             Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
-          <a class="diets__link" href="#">Каталог pro</a>
+          <a class="diets__link" href="catalog.html">Каталог pro</a>
         </div>
       </div>
     </section>
@@ -132,7 +140,16 @@
           <span>Санкт-Петербург</span>
         </address>
       </div>
-      <img class="map__image" src="img/map-mobile.png" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      <div class="map__container">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <source media="(max-width: 767px)" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <img class="map__image" srcset="img/bg-map-mobile@1x.png 1x, img/bg-map-mobile@2x.png 2x" width="320" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
+      </div>
     </section>
     <footer class="main-footer">
       <div class="main-footer__container">
@@ -140,14 +157,34 @@
           <img class="main-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип интернет-магазина Cat Energy">
         </a>
         <ul class="main-footer__list social-list">
-          <li class="social-list__item social-list__item--vkontakte"><a href="#" aria-label="В контакте"></a></li>
-          <li class="social-list__item social-list__item--instagram"><a href="#" aria-label="Instagram"></a></li>
-          <li class="social-list__item social-list__item--facebook"><a href="#" aria-label="Facebook"></a></li>
+          <li class="social-list__item social-list__item--vkontakte">
+            <a class="social-list__link" href="#" aria-label="В контакте">
+              <svg>
+                <use xlink:href="#fsp-icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item social-list__item--instagram">
+            <a class="social-list__link" href="#" aria-label="Instagram">
+              <svg>
+                <use xlink:href="#fsp-icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item social-list__item--facebook">
+            <a class="social-list__link" href="#" aria-label="Facebook">
+              <svg>
+                <use xlink:href="#fsp-icon-fb"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
-        <div class="main-footer__inner-container">
-          <small class="main-footer__copyright">HTML Academy</small>
-          <div class="main-footer__academy-logo"></div>
-        </div>
+        <small class="main-footer__copyright">
+          HTML Academy
+          <svg class="main-footer__academy-logo">
+            <use xlink:href="#fsp-icon-htmlacademy"></use>
+          </svg>
+        </small>
       </div>
     </footer>
     <script src="js/navigation-menu.js"></script>

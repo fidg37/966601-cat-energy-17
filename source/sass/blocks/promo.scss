@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: $icon-and-button-bg;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 280px 100%;
+  }
 }
 
 .promo::before {
@@ -37,6 +42,11 @@
     height: 200px;
     margin: 0 30px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px 100%;
+    }
   }
 }
 
@@ -63,6 +73,11 @@
     margin-top: 52px;
     margin-left: auto;
     margin-right: 110px;
-    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-size: 245px 100%;
+    }
   }
 }
