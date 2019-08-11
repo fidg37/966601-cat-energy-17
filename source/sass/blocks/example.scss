@@ -193,7 +193,7 @@
   .example__title,
   .example__inner-wrapper {
     width: $desktop-width;
-    padding: 0 110px;
+    padding: 0 40px;
     margin: 0 auto;
   }
 
@@ -234,7 +234,7 @@
     position: relative;
     width: $desktop-width;
     min-height: 462px;
-    background: linear-gradient(to right, #f2f2f2 72.5%, #eaeaea 72.5%);
+    background: linear-gradient(to right, #f2f2f2 75%, #eaeaea 75%);
   }
 
   .example__table-container {
@@ -242,7 +242,7 @@
   }
 
   .example__slider {
-    width: 790px;
+    width: 647px;
     right: 0;
     left: auto;
   }

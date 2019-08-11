@@ -29,6 +29,7 @@
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1;
+  text-decoration: none;
   color: #444444;
 }
 
@@ -88,8 +89,12 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-footer {
+    min-height: 150px;
+  }
+
   .main-footer__container {
     width: $desktop-width;
-    padding: 0 110px;
+    padding: 0 40px;
   }
 }

@@ -1,9 +1,12 @@
 .extra-goods {
+  border-top: 3px solid $icon-and-button-bg;
+}
+
+.extra-goods__container {
   position: relative;
   padding: 0;
   padding-top: 40px;
   margin-bottom: 35px;
-  border-top: 3px solid $icon-and-button-bg;
 }
 
 .extra-goods__title {
@@ -60,14 +63,16 @@
 
 @media (min-width: $desktop-width) {
   .extra-goods {
-    display: flex;
     margin-top: -65px;
     margin-bottom: 16px;
   }
 
+  .extra-goods__container {
+    display: flex;
+  }
+
   .extra-goods__list {
     flex-basis: 895px;
-    margin-left: 110px;
   }
 
   .extra-goods__item {
@@ -76,7 +81,9 @@
   }
 
   .extra-goods__title {
-    margin-left: 71px;
+    width: 418px;
+    margin-left: 0;
+    padding: 0 40px;
   }
 
   .extra-card__button {

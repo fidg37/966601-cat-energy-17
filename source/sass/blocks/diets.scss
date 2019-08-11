@@ -80,14 +80,14 @@
   width: 25px;
   height: 12px;
   margin-left: 10px;
-  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-image: url("../img/icon-right-arrow-long.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .diets__link:hover::after {
   width: 34px;
-  background-image: url("../../img/icon-right-arrow-verylong.svg");
+  background-image: url("../img/icon-right-arrow-verylong.svg");
 }
 
 .diets__link:active {
@@ -263,7 +263,7 @@
     position: relative;
     width: $desktop-width;
     min-height: 696px;
-    padding: 0 110px;
+    padding: 0 40px;
     padding-top: 194px;
     margin: 0 auto;
   }
@@ -272,7 +272,7 @@
     display: flex;
     justify-content: space-between;
     width: $desktop-width;
-    padding: 0 110px;
+    padding: 0 40px;
     margin: 0 auto;
   }
 
@@ -285,17 +285,18 @@
     margin-left: 80px;
   }
 
-  .diets__header::before {
+  .diets::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    width: 720px;
+    width: 50%;
     height: 696px;
     background-image: url("../img/index-background-desktop@1x.jpg");
-    background-position: 50% 50%;
+    background-position: right 0;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: $icon-and-button-bg;
+    background-color: #64a83b;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");

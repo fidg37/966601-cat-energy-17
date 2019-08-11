@@ -129,6 +129,10 @@
     opacity: 0.3;
   }
 
+  .main-navigation__item--active:hover a {
+    cursor: default;
+  }
+
   .main-navigation__item--active a {
     border-bottom: 2px solid $icon-and-button-bg;
   }
