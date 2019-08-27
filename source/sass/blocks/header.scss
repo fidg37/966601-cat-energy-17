@@ -133,7 +133,7 @@
     cursor: default;
   }
 
-  .main-navigation__item--active a {
+  .main-navigation__link--active {
     border-bottom: 2px solid $icon-and-button-bg;
   }
 }
@@ -169,7 +169,7 @@
     color: rgb(255, 255, 255);
   }
 
-  .main-navigation__item--active a {
+  .main-navigation__link--active {
     border-color: rgb(255, 255, 255);
   }
 
@@ -177,7 +177,7 @@
     color: #111111;
   }
 
-  .main-header--light-bg .main-navigation__item--active a {
+  .main-header--light-bg .main-navigation__link--active {
     border-color: $icon-and-button-bg;
   }
 }

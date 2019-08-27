@@ -62,6 +62,11 @@
   border: 1px solid #e6e6e6;
 }
 
+.program__label--text input:hover,
+.program__comment:hover {
+  border-color: #cdcdcd;
+}
+
 .program__label--text input:focus,
 .program__comment:focus {
   border: solid 2px #444444;

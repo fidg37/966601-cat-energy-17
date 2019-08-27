@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title>HTML Academy:Каталог Кэт энерджи</title>
+    <link rel="preload" src="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" src="fonts/oswalmedium.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
+    <script src="js/picturefill.js"></script>
   </head>
   <body>
     <div style="display: none">
@@ -23,7 +26,7 @@
         <ul class="main-navigation__list">
           <li class="main-navigation__item"><a class="main-navigation__link" href="index.html">Главная</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="main-navigation__item main-navigation__item--active"><a class="main-navigation__link">Подбор программы</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--active">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
@@ -35,7 +38,7 @@
           программу питания для вашего кота
         </p>
       </div>
-      <form class="program__form" action="echo.htmlacademy.ru" method="POST">
+      <form class="program__form" action="http://echo.htmlacademy.ru" method="POST">
         <div class="program__container">
           <fieldset class="program__field program__field--cat">
             <legend class="visually-hidden">Информация о питомце</legend>
@@ -175,7 +178,7 @@
           </address>
         </div>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1565403763321!5m2!1sru!2sru" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1565403763321!5m2!1sru!2sru" allowfullscreen></iframe>
       <picture>
         <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
         <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
@@ -221,6 +224,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/navigation-menu.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -1,0 +1,159 @@
+@mixin track() {
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+  padding: 0 5px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  background: white;
+}
+
+@mixin thumb() {
+  box-sizing: border-box;
+  width: 35px;
+  height: 6px;
+  border: none;
+  border-radius: 5px;
+  background: $icon-and-button-bg;
+}
+
+.range {
+  &,
+  &::-webkit-slider-thumb {
+    appearance: none;
+  }
+
+  margin: 0 12px;
+  padding: 0;
+  width: 84px;
+  height: 35px;
+  background: transparent;
+  font: 1em/1 "arial", sans-serif;
+
+  &::-webkit-slider-runnable-track {
+    @include track;
+  }
+
+  &::-moz-range-track {
+    @include track;
+  }
+
+  &::-ms-track {
+    @include track;
+  }
+
+  &::-ms-fill-lower {
+    display: none;
+  }
+
+  &::-webkit-slider-thumb {
+    margin-top: 3px;
+
+    @include thumb;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb;
+  }
+
+  &::-ms-thumb {
+    margin-top: 0;
+
+    @include thumb;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  @mixin track() {
+    box-sizing: border-box;
+    border: none;
+    width: 428px;
+    height: 6px;
+    padding: 0;
+    border-radius: 5px;
+    background: rgb(220, 220, 220);
+  }
+
+  @mixin thumb() {
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    background-color: $icon-and-button-bg;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 13px solid rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+
+  .range {
+    margin: 0 12px;
+    padding: 0;
+    width: 428px;
+    height: 34px;
+
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+
+    &::-moz-range-track {
+      @include track;
+    }
+
+    &::-ms-track {
+      @include track;
+    }
+
+    &::-ms-fill-upper {
+      background-color: rgb(220, 220, 220);
+    }
+
+    &::-ms-fill-lower {
+      background-color: rgb(220, 220, 220);
+    }
+
+    &::-webkit-slider-thumb {
+      margin-top: -14.5px;
+
+      @include thumb;
+    }
+
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+
+    &::-ms-thumb {
+      margin-top: 0;
+
+      @include thumb;
+    }
+
+    &::-webkit-slider-thumb:hover,
+    &::-moz-range-thumb:hover,
+    &::-ms-thumb:hover {
+      cursor: pointer;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &::-webkit-slider-thumb:active {
+      width: 32px;
+      height: 32px;
+      border: 12px solid rgb(255, 255, 255);
+      box-shadow:
+        0 4px 5px 0 rgba(0, 0, 0, 0.3),
+        0 0 0 2px $icon-and-button-bg;
+    }
+
+    &::-ms-tooltip {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range {
+    margin: 0 21px;
+  }
+}

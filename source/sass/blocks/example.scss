@@ -94,7 +94,7 @@
   .example__title,
   .example__container-text,
   .example__slider {
-    width: $tablet-width;
+    width: 690px;
     margin: 0 auto;
     padding: 0 30px;
   }
@@ -150,6 +150,7 @@
 
   .example__cost-parameter {
     margin-bottom: 9px;
+    margin-left: 1px;
   }
 
   .example__slider {
@@ -157,6 +158,7 @@
     top: -105px;
     left: 0;
     right: 0;
+    padding: 0;
   }
 
   .example__container-slider {
@@ -209,6 +211,8 @@
   .example__description {
     width: 435px;
     margin-bottom: 68px;
+    margin-left: 1px;
+    margin-top: 18px;
   }
 
   .example__parameter {

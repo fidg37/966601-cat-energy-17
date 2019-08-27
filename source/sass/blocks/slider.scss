@@ -1,71 +1,46 @@
-.range {
-  appearance: none;
-  width: 84px;
-  height: 14px;
-  padding: 0 6px;
-  margin: 0 12px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid #cdcdcd;
-  border-radius: 5px;
-}
-
-.range::-webkit-slider-thumb {
-  appearance: none;
-  width: 35px;
-  height: 6px;
-  background-color: $icon-and-button-bg;
-  border-radius: 2px;
-}
-
-.range::-webkit-slider-thumb:hover {
-  cursor: pointer;
-}
-
 .slider__list {
   @include ul-style-none();
 
   position: relative;
   min-height: 285px;
-  margin-left: 5px;
 }
 
 .slider__item {
   position: absolute;
   top: 26px;
-  z-index: -1;
-  width: 311px;
+  width: 320px;
   height: 232px;
-  background-position: 50% 50%;
+  background-position: 0;
   background-repeat: no-repeat;
-}
-
-.slider__item--active {
-  z-index: 0;
 }
 
 .slider__item--fat-cat {
   background-image: url("../img/before-mobile@1x.png");
+  left: 0;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/before-mobile@2x.png");
-    background-size: 311px 100%;
+    background-size: 320px 100%;
   }
 }
 
 .slider__item--slim-cat {
+  right: 0;
+  width: 0;
+  transform: rotate(180deg);
   background-image: url("../img/after-mobile@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/after-mobile@2x.png");
-    background-size: 311px 100%;
+    background-size: 320px 100%;
   }
 }
 
 .slider__pagination {
   display: flex;
-  margin-top: 10px;
+  margin-top: 2px;
   margin-left: 4px;
-  padding-bottom: 35px;
+  padding-bottom: 28px;
   justify-content: center;
   align-items: center;
 }
@@ -95,14 +70,15 @@
   .slider__item {
     top: -71px;
     z-index: 0;
-    width: 384px;
+    width: 320px;
     height: 530px;
+    background-position: 0;
   }
 
   .slider__item--fat-cat {
-    left: 0;
+    left: 25px;
     background-image: url("../img/before-tablet@1x.png");
-    background-position: 46px;
+    background-position: -15px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/before-tablet@2x.png");
@@ -111,27 +87,9 @@
   }
 
   .slider__item--slim-cat {
-    right: 0;
-    background-image: url("../img/before-tablet@1x.png");
-    background-position: -338px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/after-tablet@2x.png");
-      background-size: 690px 100%;
-    }
-  }
-
-  .slider__item--active-fat {
-    background-image: url("../img/before-tablet@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/before-tablet@2x.png");
-      background-size: 690px 100%;
-    }
-  }
-
-  .slider__item--active-slim {
-    background-image: url("../img/before-tablet@1x.png");
+    right: 25px;
+    background-image: url("../img/after-tablet@1x.png");
+    background-position: -35px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/after-tablet@2x.png");
@@ -140,40 +98,12 @@
   }
 
   .slider__pagination {
-    margin-top: 187px;
+    margin-top: 180px;
   }
 
-  .range {
-    position: relative;
-    width: 428px;
-    height: 6px;
-    padding: 0;
-    margin: 0 25px;
-    background-color: #dcdcdc;
-    border: none;
-  }
-
-  .range::-webkit-slider-thumb {
-    width: 34px;
-    height: 34px;
-    background-color: $icon-and-button-bg;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-    border: 13px solid rgb(255, 255, 255);
-    border-radius: 50%;
-  }
-
-  .range::-webkit-slider-thumb:hover {
-    cursor: pointer;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
-  }
-
-  .range::-webkit-slider-thumb:active {
-    width: 32px;
-    height: 32px;
-    border: 12px solid rgb(255, 255, 255);
-    box-shadow:
-      0 4px 5px 0 rgba(0, 0, 0, 0.3),
-      0 0 0 2px $icon-and-button-bg;
+  .slider__pagination-button {
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .slider__pagination-label {
@@ -191,9 +121,9 @@
   }
 
   .slider__item--fat-cat {
-    left: -60px;
+    left: 3px;
+    background-position: -40px;
     background-image: url("../img/before-desktop@1x.png");
-    background-position: 19px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/before-desktop@2x.png");
@@ -202,9 +132,9 @@
   }
 
   .slider__item--slim-cat {
-    right: -58px;
+    right: 4px;
+    background-position: -5px;
     background-image: url("../img/after-desktop@1x.png");
-    background-position: -365px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/after-desktop@2x.png");
@@ -212,22 +142,8 @@
     }
   }
 
-  .slider__item--active-fat {
-    background-image: url("../img/before-desktop@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/before-desktop@2x.png");
-      background-size: 690px 100%;
-    }
-  }
-
-  .slider__item--active-slim {
-    background-image: url("../img/after-desktop@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/after-desktop@2x.png");
-      background-size: 690px 100%;
-    }
+  .slider__pagination {
+    margin-top: 183px;
   }
 
   .slider__pagination-button {

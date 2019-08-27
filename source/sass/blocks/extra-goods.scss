@@ -69,10 +69,12 @@
 
   .extra-goods__container {
     display: flex;
+    margin-bottom: 15px;
   }
 
   .extra-goods__list {
     flex-basis: 895px;
+    margin-left: 40px;
   }
 
   .extra-goods__item {
@@ -81,7 +83,7 @@
   }
 
   .extra-goods__title {
-    width: 418px;
+    width: 420px;
     margin-left: 0;
     padding: 0 40px;
   }

@@ -10,12 +10,25 @@
   font-weight: 400;
 }
 
+@media (max-width: 767px) {
+  .product-card picture {
+    width: 140px;
+    height: 144px;
+  }
+}
+
 .product-card__table {
   flex-grow: 1;
+  width: 140px;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 1.33;
   color: #444444;
+}
+
+.product-card__table td {
+  padding: 0;
+  padding-top: 1px;
 }
 
 .product-card__table tr {
@@ -58,8 +71,8 @@
   }
 
   .product-card__table {
-    align-self: stretch;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
+    width: 100%;
   }
 
   .product-card__title {
@@ -73,7 +86,7 @@
 
   .product-card__table tr {
     padding-bottom: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 16px;
     line-height: 16px;
     border-bottom: 1px solid #cdcdcd;
