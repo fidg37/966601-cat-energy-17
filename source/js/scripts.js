@@ -1,8 +1,8 @@
 var menu = document.querySelector(".main-navigation");
 var button = menu.querySelector(".main-navigation__toggle");
+
 var slider = document.querySelector(".slider");
 var range = slider.querySelector(".range");
-var slide = slider.querySelector(".slider__item");
 var slideFat = slider.querySelector(".slider__item--fat-cat");
 var slideSlim = slider.querySelector(".slider__item--slim-cat");
 var screenWidth = document.documentElement.clientWidth;
@@ -26,38 +26,34 @@ range.addEventListener("click", function() {
   if (screenWidth < 768) {
     if (rangeValue < 50) {
       range.value = 0;
-      slideFat.style.width = slideWidth + "px";
-      slideSlim.style.width = slideWidth - slideWidth + "px";
+      slideFat.style.width = 100 + "%";
+      slideSlim.style.width = 0 + "%";
     } else {
       range.value = 100;
-      slideFat.style.width = slideWidth - slideWidth + "px";
-      slideSlim.style.width = slideWidth + "px";
+      slideFat.style.width = 0 + "%";
+      slideSlim.style.width = 100 + "%";
     };
   } else if (rangeValue < 40) {
       range.value = 0;
-      slideFat.style.width = slideWidth + slideWidth + "px";
-      slideSlim.style.width = slideWidth - slideWidth + "px";
+      slideFat.style.width = 100 + "%";
+      slideSlim.style.width = 0 + "%";
     } else if (rangeValue > 60) {
       range.value = 100;
-      slideFat.style.width = slideWidth - slideWidth + "px";
-      slideSlim.style.width = slideWidth + slideWidth + "px";
+      slideFat.style.width = 0 + "%";
+      slideSlim.style.width = 100 + "%";
     } else {
       range.value = 50;
-      slideFat.style.width = slideWidth + "px";
-      slideSlim.style.width = slideWidth + "px";
+      slideFat.style.width = 50 + "%";
+      slideSlim.style.width = 50 + "%";
   };
 });
 
-range.oninput = function () {
-  var rangeValue = range.value;
-  if (screenWidth < 768) {
-    var slideFatChange = (100 - rangeValue) * (slideWidth / 100);
-    var slideSlimChange = rangeValue * (slideWidth / 100);
-  } else {
-    var slideFatChange = (100 - rangeValue) * (slideWidth * 2 / 100);
-    var slideSlimChange = rangeValue * (slideWidth * 2 / 100);
-  };
+var slider = document.querySelector(".slider");
+var range = slider.querySelector(".range");
+var slideFat = slider.querySelector(".slider__item--fat-cat");
+var slideSlim = slider.querySelector(".slider__item--slim-cat");
 
-  slideFat.style.width = slideFatChange + "px";
-  slideSlim.style.width = slideSlimChange + "px";
-};
+range.addEventListener("input", function () {
+  slideFat.style.width = 100 - Math.floor(range.value) + "%";
+  slideSlim.style.width = Math.floor(range.value) + "%";
+});

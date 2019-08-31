@@ -298,6 +298,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #64a83b;
+    background-position: 0;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
