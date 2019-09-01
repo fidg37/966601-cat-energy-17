@@ -7,7 +7,6 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswalmedium.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
-    <script src="js/picturefill.js"></script>
   </head>
   <body>
     <div style="display: none">
@@ -44,19 +43,19 @@
             <legend class="visually-hidden">Информация о питомце</legend>
             <ul class="program__list">
               <li class="program__item">
-                <label class="program__label program__label--text">
+                <label class="program__label program__name program__label--text">
                   <span>Имя:*</span>
                   <input type="text" name="name" placeholder="Барсик">
                 </label>
               </li>
               <li class="program__item">
-                <label class="program__label program__label--text">
+                <label class="program__label program__weight program__label--text">
                   <span>Вес (кг):*</span>
                   <input type="text" name="name" placeholder="7">
                 </label>
               </li>
               <li class="program__item">
-                <label class="program__label program__label--text">
+                <label class="program__label program__age program__label--text">
                   <span>Возраст (лет):</span>
                   <input type="text" name="name" placeholder="7">
                 </label>
@@ -98,7 +97,7 @@
             </legend>
             <ul class="program__list">
               <li class="program__item">
-                <label class="program__label program__label--text">
+                <label class="program__label program__mail program__label--text">
                   <span>E-mail:*</span>
                   <input class="program__input" type="email" name="email" placeholder="kuklachev@gmail.com">
                   <svg class="program__icon program__icon--mail" fill="black" width="18px" height="14px">
@@ -107,7 +106,7 @@
                 </label>
               </li>
               <li class="program__item">
-                <label class="program__label program__label--text">
+                <label class="program__label program__phone program__label--text">
                   <span>Телефон:*</span>
                   <input class="program__input" type="tel" name="tel" placeholder="8 (960) 900-60-90">
                   <svg class="program__icon program__icon--phone" fill="black" width="21px" height="21px">
@@ -225,5 +224,6 @@
       </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>

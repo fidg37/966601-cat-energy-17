@@ -75,7 +75,7 @@
 }
 
 .example__slider {
-  margin-top: 11px;
+  margin-top: 34px;
 }
 
 @media (min-width: $tablet-width) {
@@ -92,9 +92,8 @@
   }
 
   .example__title,
-  .example__container-text,
-  .example__slider {
-    width: 690px;
+  .example__container-text {
+    width: $tablet-width;
     margin: 0 auto;
     padding: 0 30px;
   }
@@ -155,10 +154,10 @@
 
   .example__slider {
     position: absolute;
-    top: -105px;
+    top: -170px;
     left: 0;
     right: 0;
-    padding: 0;
+    margin: 0 auto;
   }
 
   .example__container-slider {
@@ -179,14 +178,16 @@
   }
 
   .example__container-slider {
-    position: static;
-    min-height: auto;
-    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 649px;
+    height: 100%;
+    background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .example__title,
-  .example__container-text,
-  .example__slider {
+  .example__container-text {
     width: auto;
     margin: 0;
     padding: 0;
@@ -246,7 +247,7 @@
   }
 
   .example__slider {
-    width: 646px;
+    top: -188px;
     right: 0;
     left: auto;
   }

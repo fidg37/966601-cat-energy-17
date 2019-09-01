@@ -78,6 +78,26 @@
   margin-right: 13px;
 }
 
+.program__name span {
+  margin-right: 14px;
+}
+
+.program__weight span {
+  margin-right: 17px;
+}
+
+.program__age span {
+  margin-right: 15px;
+}
+
+.program__mail span {
+  margin-right: 11px;
+}
+
+.program__phone span {
+  margin-right: 9px;
+}
+
 .program__field--cat .program__label,
 .program__field--owner .program__label {
   display: flex;
@@ -312,7 +332,7 @@
     height: 52px;
     padding-top: 12px;
     padding-bottom: 15px;
-    padding-left: 22px;
+    padding-left: 18px;
     margin-bottom: 21px;
   }
 
@@ -419,6 +439,8 @@
   }
 
   .program__notification {
+    position: relative;
+    bottom: 6px;
     display: inline;
     margin-left: 16px;
     vertical-align: middle;
@@ -429,6 +451,26 @@
 
   .program__field--extra {
     margin-bottom: 50px;
+  }
+
+  .program__name span {
+    margin-right: 16px;
+  }
+  
+  .program__weight span {
+    margin-right: 20px;
+  }
+  
+  .program__age span {
+    margin-right: 17px;
+  }
+  
+  .program__mail span {
+    margin-right: 20px;
+  }
+  
+  .program__phone span {
+    margin-right: 14px;
   }
 }
 

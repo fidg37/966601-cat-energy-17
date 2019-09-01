@@ -89,7 +89,6 @@
   }
 
   .range {
-    margin: 0 12px;
     padding: 0;
     width: 428px;
     height: 34px;
@@ -149,11 +148,5 @@
     &::-ms-tooltip {
       display: none;
     }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .range {
-    margin: 0 21px;
   }
 }
