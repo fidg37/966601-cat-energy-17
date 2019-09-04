@@ -20,10 +20,19 @@
   list-style: none;
 }
 
-.program__label,
-.program__text,
+.program__label--text span,
 .program__label input::placeholder,
 .program__comment::placeholder {
+  text-transform: uppercase;
+}
+
+.program__label span {
+  text-transform: uppercase;
+}
+
+.program__label input:-ms-input-placeholder,
+.program__comment:-ms-input-placeholder {
+  color: #444444;
   text-transform: uppercase;
 }
 
@@ -73,6 +82,22 @@
   outline: none;
 }
 
+.program__label--text input:focus,
+.program__label--text .program__error {
+  padding-left: 14px;
+}
+
+.program__comment:focus {
+  padding: 12px;
+}
+
+.program__label--text .program__error,
+.program__label--text .program__error:focus,
+.program__label--text .program__error:hover {
+  border-width: 2px;
+  border-color: #ff8282;
+}
+
 .program__label--text span {
   flex-shrink: 0;
   margin-right: 13px;
@@ -116,7 +141,7 @@
 .program__field--diets {
   padding-top: 26px;
   padding-bottom: 2px;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 
   @media (max-width: 767px) {
     border: 1px solid #e6e6e6;
@@ -212,6 +237,11 @@
   fill: $icon-and-button-bg;
 }
 
+.program__error + .program__icon,
+.program__error:focus + .program__icon {
+  fill: #ff8282;
+}
+
 .program__icon--mail {
   right: 15px;
   top: 16px;
@@ -257,10 +287,10 @@
 }
 
 .program__field--extra .program__item {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
-.program-button {
+.program__button {
   width: 280px;
   margin: 0 20px;
   margin-bottom: 23px;
@@ -269,7 +299,7 @@
   text-align: center;
 }
 
-.program-button:hover {
+.program__button:hover {
   cursor: pointer;
 }
 
@@ -430,7 +460,7 @@
     }
   }
 
-  .program-button {
+  .program__button {
     width: 283px;
     margin-left: 71px;
     padding: 15px 0;
@@ -471,6 +501,15 @@
 
   .program__phone span {
     margin-right: 14px;
+  }
+
+  .program__label--text .program__error {
+    padding-left: 17px;
+  }
+
+  .program__label--text input:focus,
+  .program__comment:focus {
+    padding-left: 17px;
   }
 }
 
@@ -545,7 +584,7 @@
     margin-right: 0;
   }
 
-  .program-button {
+  .program__button {
     width: 568px;
     margin-left: 41px;
   }

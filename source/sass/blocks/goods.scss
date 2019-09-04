@@ -29,63 +29,6 @@
   border-top: 1px solid #ededed;
 }
 
-.show {
-  flex-direction: column;
-  align-items: center;
-  order: 2;
-  padding-top: 25px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ededed;
-}
-
-.show::before {
-  content: "";
-  display: block;
-  width: 31px;
-  height: 31px;
-  margin-bottom: 7px;
-  background-image: url("../img/icon-plus-mobile.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.show__title {
-  margin-bottom: 7px;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-}
-
-.show__text {
-  margin-top: 0;
-  margin-bottom: 23px;
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 1.33;
-  color: #444444;
-}
-
-.show__button {
-  padding-top: 9px;
-  padding-bottom: 10px;
-  margin-bottom: 13px;
-  align-self: stretch;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #444444;
-  background-color: #f2f2f2;
-}
-
-.show__button:hover {
-  background-color: rgb(235, 235, 235);
-}
-
-.show__button:active {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: rgba(235, 235, 235, 0.3);
-}
-
 @media (min-width: $tablet-width) {
   .goods__title {
     margin-top: 56px;
@@ -107,44 +50,10 @@
     max-width: 324px;
     align-items: center;
     margin: 0 30px;
-    margin-bottom: 140px;
+    margin-bottom: 139px;
     padding: 0 37px;
     background-color: #eaeaea;
     border: none;
-  }
-
-  .show {
-    flex-basis: 324px;
-    margin-left: 0 30px;
-    padding-top: 53px;
-    padding-bottom: 24px;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #eaeaea;
-  }
-
-  .show::before {
-    width: 61px;
-    height: 61px;
-    margin-bottom: 28px;
-    background-image: url("../img/icon-plus.svg");
-  }
-
-  .show__title {
-    width: 145px;
-    margin-bottom: 28px;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .show__text {
-    width: 180px;
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  .show__button {
-    margin-top: auto;
   }
 }
 
@@ -163,16 +72,7 @@
     flex-basis: 245px;
     max-width: 245px;
     margin: 0 40px;
-    margin-bottom: 143px;
+    margin-bottom: 142px;
     padding: 0 38px;
-  }
-
-  .show__text {
-    width: 167px;
-  }
-
-  .show {
-    padding-top: 54px;
-    padding-bottom: 24px;
   }
 }

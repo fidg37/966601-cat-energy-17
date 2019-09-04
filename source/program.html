@@ -5,7 +5,7 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title>HTML Academy:Каталог Кэт энерджи</title>
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswalmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -45,13 +45,13 @@
               <li class="program__item">
                 <label class="program__label program__name program__label--text">
                   <span>Имя:*</span>
-                  <input type="text" name="name" placeholder="Барсик">
+                  <input class="program__input-js" type="text" name="name" required placeholder="Барсик">
                 </label>
               </li>
               <li class="program__item">
                 <label class="program__label program__weight program__label--text">
                   <span>Вес (кг):*</span>
-                  <input type="text" name="name" placeholder="7">
+                  <input class="program__input-js" type="text" name="name" required placeholder="7">
                 </label>
               </li>
               <li class="program__item">
@@ -99,7 +99,7 @@
               <li class="program__item">
                 <label class="program__label program__mail program__label--text">
                   <span>E-mail:*</span>
-                  <input class="program__input" type="email" name="email" placeholder="kuklachev@gmail.com">
+                  <input class="program__input program__input-js" type="email" name="email" required placeholder="kuklachev@gmail.com">
                   <svg class="program__icon program__icon--mail" fill="black" width="18px" height="14px">
                     <use xlink:href="#fsp-icon-mail"></use>
                   </svg>
@@ -108,7 +108,7 @@
               <li class="program__item">
                 <label class="program__label program__phone program__label--text">
                   <span>Телефон:*</span>
-                  <input class="program__input" type="tel" name="tel" placeholder="8 (960) 900-60-90">
+                  <input class="program__input program__input-js" type="tel" name="tel" required placeholder="8 (960) 900-60-90">
                   <svg class="program__icon program__icon--phone" fill="black" width="21px" height="21px">
                     <use xlink:href="#fsp-icon-phone"></use>
                   </svg>
@@ -156,7 +156,7 @@
                 </label>
               </li>
             </ul>
-            <button class="program-button button" type="submit">Отправить заявку</button>
+            <button class="program__button button" type="submit">Отправить заявку</button>
             <span class="program__notification">* — Обязательные поля</span>
           </fieldset>
         </div>
@@ -223,7 +223,7 @@
         </a>
       </div>
     </footer>
-    <script src="js/menu.js"></script>
+    <script src="js/program-scripts.js"></script>
     <script src="js/picturefill.js"></script>
   </body>
 </html>

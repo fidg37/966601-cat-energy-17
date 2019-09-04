@@ -114,7 +114,7 @@
   background-position: 50% 50%;
 }
 
-.diets--sitting-cat::after {
+.diets__title--sitting-cat::after {
   top: 22px;
   left: 30px;
   width: 35px;
@@ -122,7 +122,7 @@
   background-image: url("../img/icon-cat-slim.svg");
 }
 
-.diets--walking-cat::after {
+.diets__title--walking-cat::after {
   top: 35px;
   left: 13px;
   width: 67px;
@@ -201,7 +201,7 @@
     height: 200px;
   }
 
-  .diets--sitting-cat::after {
+  .diets__title--sitting-cat::after {
     top: 80px;
     left: auto;
     right: 92px;
@@ -209,7 +209,7 @@
     height: 194px;
   }
 
-  .diets--walking-cat::after {
+  .diets__title--walking-cat::after {
     top: 135px;
     left: auto;
     right: 28px;
@@ -341,7 +341,7 @@
     height: 100px;
   }
 
-  .diets--sitting-cat::after {
+  .diets__title--sitting-cat::after {
     top: 41px;
     left: 65px;
     right: auto;
@@ -349,7 +349,7 @@
     height: 97px;
   }
 
-  .diets--walking-cat::after {
+  .diets__title--walking-cat::after {
     top: 69px;
     left: 34px;
     right: auto;

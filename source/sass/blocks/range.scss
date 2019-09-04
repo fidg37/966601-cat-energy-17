@@ -129,9 +129,13 @@
       @include thumb;
     }
 
-    &::-webkit-slider-thumb:hover,
     &::-moz-range-thumb:hover,
     &::-ms-thumb:hover {
+      cursor: pointer;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &::-webkit-slider-thumb:hover {
       cursor: pointer;
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
